@@ -2,6 +2,9 @@ import React from 'react';
 import './Formulario.css'
 
 function Formulario() {
+  function login(){ alert("Boas-vindas!!"); }
+  function esqueceuSenha(){ alert("Você esqueceu a senha!");}
+
   return (
       <div className="principal">
           <form className="formulario">
@@ -11,9 +14,9 @@ function Formulario() {
               <div className="senha">
                 <input type="password" name="senha" placeholder="Senha" />
               </div>
-                <button className="botao"> LOGIN </button>
+                <button className="botao" onClick={()=>login()}> LOGIN </button>
                 <p className="esqueceu">
-                    Esqueceu a senha? <a href="#">Clique aqui</a>
+                    Esqueceu a senha? <a href="#" onClick={()=>esqueceuSenha()}>Clique aqui</a>
                 </p>
           </form>
       </div>
